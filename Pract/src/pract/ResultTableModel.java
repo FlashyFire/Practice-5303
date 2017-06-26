@@ -34,7 +34,7 @@ public class ResultTableModel implements TableModel {
     public String getColumnName(int columnIndex) {
         if (columnIndex == 0)
             return "";
-        Integer id = columnIndex;
+        Integer id = columnIndex-1;
         return id.toString();
     }
 
@@ -46,7 +46,7 @@ public class ResultTableModel implements TableModel {
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         if (columnIndex == 0)
-            return rowIndex + 1;
+            return rowIndex ;
 	return Alg.d[columnIndex - 1][rowIndex];
     }
 

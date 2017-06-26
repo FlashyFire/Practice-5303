@@ -15,10 +15,9 @@ public class Alg extends Graph{
     
     public static void Init(String s)
     {
-        getN(s);
         s=fix(s);
+        getN(s);
         Arr_in(s);
-        //AlgF();
     }
     
     public static void AlgF() //собственно алгоритм Флойда Уоршалла

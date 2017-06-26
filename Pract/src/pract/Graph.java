@@ -45,14 +45,18 @@ public class Graph {
     }
     public static void getN (String s)
     {
+        N=0;
+        s=fix(s);
+        s+=" ";
         for (int i = 1; i < s.length(); i++) {
+            
             String s1,s2;
             s1 = s.substring(i,i+1);
             s2 = s.substring(i-1,i);
-            if (((s1.equals("\n"))||(s1.equals(" "))&&(!(s2.equals(" "))))||(!((s1.equals("\n"))||(s1.equals(" ")))&&(i==s.length()-1)))
-            {
+            if (s1.equals(" ")&&((s2.equals("1"))||((s2.equals("0"))||(s2.equals("2"))||(s2.equals("3"))
+                    ||(s2.equals("4"))||(s2.equals("5"))||(s2.equals("6"))||(s2.equals("7"))
+                    ||(s2.equals("8"))||(s2.equals("9")))))
                 ++N;
-            }
         }
         double n = Math.sqrt(N);
         N = (int) n;
@@ -60,16 +64,20 @@ public class Graph {
     public static String fix(String s)
     {
         s=" "+s + " ";
-        for (int i = 0; i < s.length(); i++) {
-            if (s.substring(i,i+1).equals("\n"))
+        String S = " ";
+        int l=s.length();
+        for (int i = 0; i < l; i++) {
+            if (s.substring(i, i+1).equals("1")||s.substring(i, i+1).equals("0")||s.substring(i, i+1).equals("2")||s.substring(i, i+1).equals("3")
+                    ||s.substring(i, i+1).equals("4")||s.substring(i, i+1).equals("5")||s.substring(i, i+1).equals("6")||s.substring(i, i+1).equals("7")
+                    ||s.substring(i, i+1).equals("8")||s.substring(i, i+1).equals("9")||s.substring(i, i+1).equals(" "))
             {
-                String s1 = s.substring(0,i-1);
-                String s2 = s.substring(i+1,s.length());
-                s = s1+"  " +s2;
-
-            }
+                 S+=s.substring(i, i+1);
+                             }
+            else
+                S+=" ";
         }
-        return s;
+        S+=" ";
+        return S;
     }
     
 }

@@ -26,7 +26,9 @@ public class GraphPainter {
         g.setStroke(new BasicStroke(1)); 
             double[][] F = new double[N][2];
             double PI = 3.14159;
-            double angle = 360/N;
+            double angle=0;
+            if (N!=0)
+                angle = 360/N;
             angle = angle * PI / 180;
             double r = 80;
             double x = 250;

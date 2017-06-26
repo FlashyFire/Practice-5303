@@ -3,10 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/Git/Pract/src/pract/Graph.java</file>
-            <file>file:/F:/Git/Pract/src/pract/MainWindow.java</file>
-            <file>file:/F:/Git/Pract/src/pract/GraphTableModel.java</file>
-            <file>file:/F:/Git/Pract/src/pract/Alg.java</file>
+            <file>file:/E:/Pract/src/pract/Alg.java</file>
+            <file>file:/E:/Pract/src/pract/GraphTableModel.java</file>
+            <file>file:/E:/Pract/src/pract/Graph.java</file>
+            <file>file:/E:/Pract/src/pract/FromFile.java</file>
+            <file>file:/E:/Pract/src/pract/ResultTableModel.java</file>
+            <file>file:/E:/Pract/src/pract/MainWindow.java</file>
+            <file>file:/E:/Pract/src/pract/FName.java</file>
+            <file>file:/E:/Pract/src/pract/GraphPainter.java</file>
+            <file>file:/E:/Pract/src/pract/GraphView.java</file>
+            <file>file:/E:/Pract/src/pract/FileChoose.java</file>
         </group>
     </open-files>
 </project-private>

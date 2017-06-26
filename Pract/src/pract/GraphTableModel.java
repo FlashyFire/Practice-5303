@@ -8,6 +8,7 @@ public class GraphTableModel implements TableModel {
     private HashSet<TableModelListener> listeners = new HashSet<>();
 
     public GraphTableModel() {
+                //getTableHeader().setReorderingAllowed(false);
     }
 
     @Override
@@ -34,7 +35,7 @@ public class GraphTableModel implements TableModel {
     public String getColumnName(int columnIndex) {
         if (columnIndex == 0)
             return "";
-        Integer id = columnIndex;
+        Integer id = columnIndex-1;
         return id.toString();
     }
 
@@ -46,7 +47,7 @@ public class GraphTableModel implements TableModel {
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         if (columnIndex == 0)
-            return rowIndex + 1;
+            return rowIndex ;
 	return Alg.L[columnIndex - 1][rowIndex];
     }
 
@@ -54,11 +55,16 @@ public class GraphTableModel implements TableModel {
     public boolean isCellEditable(int rowIndex, int columnIndex) {
 	return columnIndex > 0;
     }
+    
+    
 
     @Override
     public void setValueAt(Object value, int rowIndex, int columnIndex) {
         if (columnIndex == 0)
+        {
+            //setBackground(Color.Red);
             return;
+        }
         Alg.L[columnIndex - 1][rowIndex] = Integer.valueOf(value.toString());
     }
 
