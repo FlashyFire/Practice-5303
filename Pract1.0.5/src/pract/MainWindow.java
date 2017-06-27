@@ -171,8 +171,6 @@ public class MainWindow extends javax.swing.JFrame {
         catch (IOException e1) {
             e1.printStackTrace();
         }
-             
-        
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -184,12 +182,6 @@ public class MainWindow extends javax.swing.JFrame {
             char ch = s.charAt(i);
             if (digits.indexOf(ch) >= 0)
                 S += ch;
-//            if (s.substring(i, i+1).equals("1")||s.substring(i, i+1).equals("0")||s.substring(i, i+1).equals("2")||s.substring(i, i+1).equals("3")
-//                    ||s.substring(i, i+1).equals("4")||s.substring(i, i+1).equals("5")||s.substring(i, i+1).equals("6")||s.substring(i, i+1).equals("7")
-//                    ||s.substring(i, i+1).equals("8")||s.substring(i, i+1).equals("9"))
-//            {
-//                 S+=s.substring(i, i+1);
-//            }
         }
         s=S;
         int n = Integer.parseInt(s);
@@ -201,8 +193,6 @@ public class MainWindow extends javax.swing.JFrame {
         }
         Alg.Init(s);
         TableHelper.SetUpTable(jTable1, new TableModelGraph());
-        //Alg.AlgF();
-        //SetUpTable(jTable2, new ResultTableModel());
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
@@ -212,22 +202,22 @@ public class MainWindow extends javax.swing.JFrame {
         
         Alg.Init(s);
         TableHelper.SetUpTable(jTable1, new TableModelGraph());
-        //Alg.AlgF();
-        //SetUpTable(jTable2, new ResultTableModel());
     }//GEN-LAST:event_formWindowOpened
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        Gen g  = new Gen();
+        Gen g = new Gen();
         g.setVisible(true);
-        g.addWindowListener(new WindowListener()
-                {
-                    public void windowClosed(WindowEvent e) {
-            
-          if (g.I==1)
-          {
-          TableHelper.SetUpTable(jTable1, new TableModelGraph()); 
-                    GraphView.main(a);}}
+        g.addWindowListener(new WindowListener() {
+            @Override
+            public void windowClosed(WindowEvent e) {
+
+                if (g.I == 1) {
+                    TableHelper.SetUpTable(jTable1, new TableModelGraph());
+                    jTable1.repaint();
+                    GraphView.main(a);
+                }
+            }
 
             @Override
             public void windowOpened(WindowEvent e) {
@@ -258,9 +248,8 @@ public class MainWindow extends javax.swing.JFrame {
             public void windowDeactivated(WindowEvent e) {
                // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
-
             
-                });
+        });
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
