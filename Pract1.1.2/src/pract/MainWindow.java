@@ -196,12 +196,22 @@ public class MainWindow extends javax.swing.JFrame {
                 S += ch;
         }
         s=S;
-        int n = Integer.parseInt(s);
-        s = "";
-        for (int i=0;i<n*n;++i)
-        {
-            s+="0";
-            s+=" ";
+        try{
+            int n = Integer.parseInt(s);
+            s = "";
+            if (n < 2 || n > 20) {
+                javax.swing.JOptionPane.showMessageDialog(this, "Количество вершин графа вне диапазона 2...20!");
+                return;
+            }
+            for (int i=0;i<n*n;++i)
+            {
+                s+="0";
+                s+=" ";
+            }
+        }
+        catch (NumberFormatException ex) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Неверно задано количество вершин графа!");
+            return;
         }
         Alg.Init(s);
         TableHelper.SetUpTable(jTable1, new TableModelGraph());
