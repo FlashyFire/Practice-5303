@@ -168,6 +168,7 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void mnuOpenFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuOpenFileActionPerformed
         jFileChooser1.setDialogTitle("Открыть файл");
+        jFileChooser1.setPreferredSize(new java.awt.Dimension(700, 600));
         if (jFileChooser1.showOpenDialog(this) == javax.swing.JFileChooser.APPROVE_OPTION) {
             File file = jFileChooser1.getSelectedFile();
             try {
@@ -276,6 +277,7 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void mnuSaveFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSaveFileActionPerformed
         jFileChooser1.setDialogTitle("Сохранить файл");
+        jFileChooser1.setPreferredSize(new java.awt.Dimension(700, 600));
         if (jFileChooser1.showSaveDialog(this) == javax.swing.JFileChooser.APPROVE_OPTION) {
             File file = jFileChooser1.getSelectedFile();
             try {
