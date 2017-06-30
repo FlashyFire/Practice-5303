@@ -68,7 +68,8 @@ public class TableModelInc implements TableModel {
 
     @Override
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
-        Alg.L[rowIndex][(columnIndex-1)/2]=Integer.valueOf(aValue.toString());
+        if (Integer.valueOf(aValue.toString())<100)
+            Alg.L[rowIndex][(columnIndex-1)/2]=Integer.valueOf(aValue.toString());
         this.owner.updateGraphView();
         this.owner.updateTable();
         

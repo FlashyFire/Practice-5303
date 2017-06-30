@@ -136,8 +136,8 @@ public class Gen extends javax.swing.JFrame implements WindowListener{
         try {
             s = jTextField3.getText();
             w = Integer.parseInt(s);
-            if (w < 1 || w > 10) {
-                javax.swing.JOptionPane.showMessageDialog(this, "Вес ребра вне диапазона 1...10!");
+            if (w < 1 || w > 100) {
+                javax.swing.JOptionPane.showMessageDialog(this, "Вес ребра вне диапазона 1...100");
                 return;
             }
         } catch (NumberFormatException ex) {

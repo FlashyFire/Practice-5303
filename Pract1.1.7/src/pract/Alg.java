@@ -108,7 +108,7 @@ public class Alg extends Graph{
     public static void finish() {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                if (d[i][j] >= INF)
+                if (d[i][j] >= INF/2)
                     d[i][j]=0;
             }
         }

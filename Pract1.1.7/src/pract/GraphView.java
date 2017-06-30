@@ -132,7 +132,7 @@ public class GraphView extends javax.swing.JFrame implements ActionListener{
 
         jMenu1.setText("Файл");
 
-        jMenuItem1.setText("Сохранить в файл");
+        jMenuItem1.setText("Сохранить результат в файл");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);

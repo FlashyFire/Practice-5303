@@ -253,15 +253,6 @@ public class MainWindow extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         String s = jTextField1.getText();
         String S = "";
-        int l = s.length();
-        String digits = "0123456789";
-        for (int i = 0; i < l; i++) {
-            char ch = s.charAt(i);
-            if (digits.indexOf(ch) >= 0) {
-                S += ch;
-            }
-        }
-        s=S;
         try {
             int n = Integer.parseInt(s);
             if (n < 2 || n > 20) {

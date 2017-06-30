@@ -24,7 +24,10 @@ public class TableModelGraph extends TableModelBase {
     public void setValueAt(Object value, int rowIndex, int columnIndex) {
         if (columnIndex == 0)
             return;
-        Alg.L[rowIndex][columnIndex - 1] = Integer.valueOf(value.toString());
+        if (Integer.valueOf(value.toString())<100)
+            Alg.L[rowIndex][columnIndex - 1] = Integer.valueOf(value.toString());
+        
+            
         this.owner.updateGraphView();
     }
 }
